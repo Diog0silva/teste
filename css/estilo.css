@@ -1,94 +1,104 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
+/* Geral */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f5f7fa;
+  padding: 20px;
+}
 
-  body {
-    font-family: 'Segoe UI', sans-serif;
-    background-color: #f5f7fa;
-    padding: 20px;
-  }
+h2 {
+  text-align: center;
+  margin-bottom: 8px;
+  font-size: 2rem;
+}
 
-  h2 {
-    text-align: center;
-    margin-bottom: 8px;
-    font-size: 2rem;
-  }
+p.subtitle {
+  text-align: center;
+  color: #555;
+  margin-bottom: 32px;
+}
 
-  p.subtitle {
-    text-align: center;
-    color: #555;
-    margin-bottom: 32px;
-  }
+/* Espaçamento para o destaque */
+.destaque-container {
+  max-width: 1100px;
+  margin: 0 auto 40px; /* margem embaixo para separar dos outros */
+}
 
-  .servicos-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 16px;
-    max-width: 1100px;
-    margin: 0 auto;
-  }
+/* Grid dos serviços */
+.servicos-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 2fr));
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
 
-  .servico {
-    background: #ffffff;
-    border-radius: 14px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
-    padding: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-align: center;
-    cursor: pointer;
-  }
+/* Estilo geral dos cards */
+.servico {
+  background: #cccccc;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 1.5);
+  padding: 16px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  cursor: pointer;
+}
 
-  .servico:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-  }
+/* Efeito de hover nos cards */
+.servico:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
 
-  .servico img,
+/* Imagens e Vídeos */
+.servico img,
 .servico video {
   width: 100%;
   aspect-ratio: 16 / 9;
   border-radius: 10px;
-  margin-bottom: 10px;
-  object-fit: cover;
+  margin-bottom: 12px;
+  object-fit: contain;
+  background-color: #000;
   display: block;
 }
-  .servico h3 {
-    font-size: 1rem;
-    margin-bottom: 4px;
-    color: #333;
-  }
 
-  .servico p {
-    color: #666;
-    font-size: 0.85rem;
-  }
-
-  /* Destaque */
-  .servico video {
-width: 100%;
-height: auto;
-aspect-ratio: 16 / 9;
-object-fit: contain;
-background-color: #000; /* evita bordas brancas */
-border-radius: 12px;
-margin-bottom: 12px;
-display: block;
+/* Texto do card */
+.servico h3 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  color: #222;
 }
 
-
-  .destaque video {
-  aspect-ratio: 16 / 9;
-  height: auto;
+.servico p {
+  color: #333;
+  font-size: 0.9rem;
 }
 
+/* Estilo especial para o card de destaque */
+.servico.destaque {
+  background: #cccccc;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 1.5);
+  padding: 24px;
+}
+
+.servico.destaque h3 {
+  font-size: 1.5rem;
+  color: #111;
+}
+
+.servico.destaque p {
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Responsivo */
 @media (max-width: 768px) {
-  .servico img,
-  .servico video {
-    aspect-ratio: 16 / 9;
+
+  .servicos-container {
+    grid-template-columns: repeat(2, 1fr);
   }
 
+   .servico img,
+  .servico video,
   .destaque video {
     aspect-ratio: 16 / 9;
   }
