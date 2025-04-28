@@ -1,8 +1,9 @@
-/* Geral */
+
 body {
   font-family: 'Segoe UI', sans-serif;
-  background-color: #f5f7fa;
+  background-color: #ebe8e8;
   padding: 20px;
+  
 }
 
 h2 {
@@ -17,13 +18,13 @@ p.subtitle {
   margin-bottom: 32px;
 }
 
-/* Espaçamento para o destaque */
+
 .destaque-container {
   max-width: 1100px;
-  margin: 0 auto 40px; /* margem embaixo para separar dos outros */
+  margin: 0 auto 40px; 
 }
 
-/* Grid dos serviços */
+
 .servicos-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 2fr));
@@ -32,9 +33,9 @@ p.subtitle {
   margin: 0 auto;
 }
 
-/* Estilo geral dos cards */
+
 .servico {
-  background: #cccccc;
+  background: #e4d1b9;
   border-radius: 14px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 1.5);
   padding: 16px;
@@ -43,13 +44,13 @@ p.subtitle {
   cursor: pointer;
 }
 
-/* Efeito de hover nos cards */
+
 .servico:hover {
   transform: translateY(-6px);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
 
-/* Imagens e Vídeos */
+
 .servico img,
 .servico video {
   width: 100%;
@@ -59,9 +60,10 @@ p.subtitle {
   object-fit: contain;
   background-color: #000;
   display: block;
+
 }
 
-/* Texto do card */
+
 .servico h3 {
   font-size: 1.2rem;
   margin-bottom: 8px;
@@ -73,9 +75,9 @@ p.subtitle {
   font-size: 0.9rem;
 }
 
-/* Estilo especial para o card de destaque */
+
 .servico.destaque {
-  background: #cccccc;
+  background: #e4d1b9;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 1.5);
   padding: 24px;
 }
@@ -90,7 +92,7 @@ p.subtitle {
   color: #333;
 }
 
-/* Responsivo */
+
 @media (max-width: 768px) {
 
   .servicos-container {
