@@ -1,5 +1,5 @@
 
-body {
+.dio {
   font-family: 'Segoe UI', sans-serif;
   background-color: #ebe8e8;
   padding: 20px;
@@ -104,4 +104,61 @@ p.subtitle {
   .destaque video {
     aspect-ratio: 16 / 9;
   }
+}
+
+.tai {
+  background-color: #e4d1b9;
+  font-family:'Times New Roman', Times, serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.conteiner {
+
+
+  display: flex;
+  align-items: center;
+  width: 80%;
+  margin:0 auto;
+  padding: 20px;
+  gap: 200px;
+  background-color:#e4d1b9 ;
+
+
+
+}
+
+.texto h1{
+  margin: 0%;
+  padding: 10px;
+  font-size: 60px;
+  background-color: #e4d1b9;
+  color:black
+}
+
+.texto h5{
+
+  margin: 0;
+  font-size: 30px;
+  background-color: #e4d1b9;
+  color: white;
+  margin-left: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  
+
+
+
+}
+
+.imagem-direita img{
+
+  max-width: 600px;
+  height: auto;
+  border-radius: 45px;
+  width: 100%;
+  margin-left: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 1.5);
 }
