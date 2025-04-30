@@ -1,4 +1,3 @@
-
 body {
   margin: 0;
   padding: 0;
@@ -9,7 +8,6 @@ body {
   font-family: 'Segoe UI', sans-serif;
   background-color: #ebe8e8;
   padding: 20px;
-  
 }
 
 h2 {
@@ -24,13 +22,12 @@ p.subtitle {
   margin-bottom: 32px;
 }
 
-
 .destaque-container {
   max-width: 1100px;
-  margin: 0 auto 40px; 
+  margin: 0 auto 40px;
 }
 
-
+/* Responsividade dos serviços */
 .servicos-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -39,7 +36,7 @@ p.subtitle {
   margin: 0 auto;
 }
 
-
+/* Estilo do serviço */
 .servico {
   background: #e4d1b9;
   border-radius: 14px;
@@ -50,12 +47,10 @@ p.subtitle {
   cursor: pointer;
 }
 
-
 .servico:hover {
   transform: translateY(-6px);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
-
 
 .servico img,
 .servico video {
@@ -66,9 +61,7 @@ p.subtitle {
   object-fit: contain;
   background-color: #000;
   display: block;
-
 }
-
 
 .servico h3 {
   font-size: 1.2rem;
@@ -80,7 +73,6 @@ p.subtitle {
   color: #333;
   font-size: 0.9rem;
 }
-
 
 .servico.destaque {
   background: #e4d1b9;
@@ -98,11 +90,12 @@ p.subtitle {
   color: #333;
 }
 
-
+/* Media query para dispositivos móveis */
 @media (max-width: 768px) {
+  /* Serviços: uma coluna no mobile */
   .servicos-container {
-    display: grid !important;
-    grid-template-columns: 1fr !important;
+    display: grid;
+    grid-template-columns: 1fr; /* 1 coluna */
     gap: 24px;
   }
 
@@ -115,11 +108,13 @@ p.subtitle {
     aspect-ratio: 16 / 9;
   }
 
-  .texto {
-    text-align: center;
-    padding: 10px;
-    justify-content: center;
-    align-items: center;
+  /* Ajustes de texto para dispositivos móveis */
+  .texto h1 {
+    font-size: 24px;
+  }
+
+  .texto h5 {
+    font-size: 16px;
   }
 
   .imagem-direita img {
@@ -128,19 +123,9 @@ p.subtitle {
     border-radius: 10px;
     margin: 0;
   }
-
-  .texto h1 {
-    font-size: 24px;
-  }
-
-  .texto h5 {
-    font-size: 16px;
-  }
 }
 
-
-
-
+/* Seção Tai sem rolagem horizontal */
 .tai {
   background-color: #e4d1b9;
   font-family: 'Times New Roman', Times, serif;
@@ -148,36 +133,37 @@ p.subtitle {
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow-x: hidden;
   box-sizing: border-box;
-  padding: 0; 
+  padding: 0;
 }
 
+/* Ajuste para a estrutura dentro da seção tai */
 .conteiner {
   display: flex;
-  flex-direction: row; /* mantém sempre lado a lado */
+  flex-direction: row; /* Mantém os itens na horizontal */
   width: 100%;
   height: 100%;
   box-sizing: border-box;
+  overflow: hidden; /* Impede a rolagem horizontal */
 }
 
 .texto h1 {
   margin: 0;
   padding: 0;
-  font-size: 60px;
+  font-size: 40px; /* Diminuído o tamanho da fonte */
   background-color: #e4d1b9;
   color: black;
-  font-weight: 800; 
+  font-weight: 800;
 }
 
 .texto h5 {
   margin: 0;
   padding: 0;
-  font-size: 30px;
+  font-size: 24px; /* Ajustado para celular */
   background-color: #e4d1b9;
   color: white;
   font-family: Arial, Helvetica, sans-serif;
-  font-weight: 300; 
+  font-weight: 300;
 }
 
 .texto {
@@ -185,11 +171,10 @@ p.subtitle {
   padding: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: center;  /* Centraliza verticalmente */
-  align-items: center;      /* Centraliza horizontalmente */
-  text-align: center;       /* Centraliza texto */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
-
 
 .imagem-direita {
   width: 50%;
@@ -206,4 +191,3 @@ p.subtitle {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 1.5);
   object-fit: cover;
 }
-
