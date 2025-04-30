@@ -33,7 +33,7 @@ p.subtitle {
 
 .servicos-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 2fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 24px;
   max-width: 1100px;
   margin: 0 auto;
