@@ -101,7 +101,18 @@ p.subtitle {
 
 @media (max-width: 768px) {
   .servicos-container {
-    grid-template-columns: repeat(1, 1fr); /* 1 coluna no celular */
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .servico {
+    width: 100%;
+  }
+
+  .servico img,
+  .servico video {
+    aspect-ratio: 16 / 9;
   }
 
   .texto {
@@ -129,10 +140,11 @@ p.subtitle {
 
 
 
+
 .tai {
   background-color: #e4d1b9;
   font-family: 'Times New Roman', Times, serif;
-  height: 70vh;
+  height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;
