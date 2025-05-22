@@ -1,12 +1,97 @@
-body {
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+
+html, body {
+  height: 100%;
   overflow-x: hidden;
 }
 
-.dio {
+body {
   font-family: 'Segoe UI', sans-serif;
   background-color: #ebe8e8;
+}
+
+/* Seção de thaisa */
+.tai {
+  background-color: #e4d1b9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  overflow-x: auto;
+}
+
+.conteiner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  width: 100%;
+  max-width: 1000px;
+  flex-wrap: nowrap; 
+}
+
+.texto {
+  flex: 1;
+  min-width: 200px;
+}
+
+.texto h1 {
+  font-size: 2rem;
+  color: black;
+  margin-bottom: 8px;
+  white-space: normal;
+}
+
+.texto h5 {
+  font-size: 1rem;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.imagem-direita {
+  flex: 1;
+  min-width: 200px;
+  display: flex;
+  justify-content: center;
+  padding-right: 20px;
+}
+
+.imagem-direita img {
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  object-fit: contain;
+ 
+}
+
+
+@media (max-width: 768px) {
+  .texto h1 {
+    font-size: 1.4rem;
+  }
+
+  .texto h5 {
+    font-size: 0.85rem;
+  }
+
+  .imagem-direita img {
+    max-width: 180px;
+
+  }
+
+  .conteiner {
+    gap: 5px;
+  }
+}
+
+
+/* Seção de diogo */
+.dio {
   padding: 20px;
 }
 
@@ -27,23 +112,21 @@ p.subtitle {
   margin: 0 auto 40px;
 }
 
-/* Responsividade dos serviços */
 .servicos-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 2fr));
   gap: 24px;
   max-width: 1100px;
   margin: 0 auto;
 }
 
-/* Estilo do serviço */
 .servico {
   background: #e4d1b9;
   border-radius: 14px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 1.5);
   padding: 16px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
 }
 
@@ -60,7 +143,6 @@ p.subtitle {
   margin-bottom: 12px;
   object-fit: contain;
   background-color: #000;
-  display: block;
 }
 
 .servico h3 {
@@ -90,104 +172,15 @@ p.subtitle {
   color: #333;
 }
 
-/* Media query para dispositivos móveis */
-@media (max-width: 768px) {
-  /* Serviços: uma coluna no mobile */
-  .servicos-container {
-    display: grid;
-    grid-template-columns: 1fr; /* 1 coluna */
-    gap: 24px;
-  }
 
-  .servico {
-    width: 100%;
+@media (max-width: 768px) {
+  .servicos-container {
+    grid-template-columns: 1fr;
   }
 
   .servico img,
-  .servico video {
+  .servico video,
+  .destaque video {
     aspect-ratio: 16 / 9;
   }
-
-  /* Ajustes de texto para dispositivos móveis */
-  .texto h1 {
-    font-size: 24px;
-  }
-
-  .texto h5 {
-    font-size: 16px;
-  }
-
-  .imagem-direita img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin: 0;
-  }
-}
-
-/* Seção Tai sem rolagem horizontal */
-.tai {
-  background-color: #e4d1b9;
-  font-family: 'Times New Roman', Times, serif;
-  height: 80vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-sizing: border-box;
-  padding: 0;
-}
-
-/* Ajuste para a estrutura dentro da seção tai */
-.conteiner {
-  display: flex;
-  flex-direction: row; /* Mantém os itens na horizontal */
-  width: 100%;
-  height: 100%;
-  box-sizing: border-box;
-  overflow: hidden; /* Impede a rolagem horizontal */
-}
-
-.texto h1 {
-  margin: 0;
-  padding: 0;
-  font-size: 40px; /* Diminuído o tamanho da fonte */
-  background-color: #e4d1b9;
-  color: black;
-  font-weight: 800;
-}
-
-.texto h5 {
-  margin: 0;
-  padding: 0;
-  font-size: 24px; /* Ajustado para celular */
-  background-color: #e4d1b9;
-  color: white;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: 300;
-}
-
-.texto {
-  width: 50%;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.imagem-direita {
-  width: 50%;
-  padding: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.imagem-direita img {
-  width: 100%;
-  height: auto;
-  border-radius: 20px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 1.5);
-  object-fit: cover;
 }
