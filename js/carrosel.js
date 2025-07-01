@@ -1,14 +1,21 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const carousels = document.querySelectorAll('.carousel');
+  const carousels = document.querySelectorAll('.carousel');
 
-    carousels.forEach(carousel => {
-      const imagens = JSON.parse(carousel.getAttribute('data-imagens'));
-      let index = 0;
-      const imgElement = carousel.querySelector('img');
+  carousels.forEach(carousel => {
+    const elements = carousel.querySelectorAll('img, video');
+    let index = 0;
 
-      setInterval(() => {
-        index = (index + 1) % imagens.length;
-        imgElement.src = imagens[index];
-      }, 3500); // troca a cada 3 segundos
+    elements.forEach((el, i) => {
+      el.style.display = i === 0 ? 'block' : 'none';
     });
+
+    setInterval(() => {
+    
+      elements[index].style.display = 'none';
+
+      index = (index + 1) % elements.length;
+
+      elements[index].style.display = 'block';
+    }, 3500); 
   });
+});
